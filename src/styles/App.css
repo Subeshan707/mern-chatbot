@@ -289,13 +289,40 @@
 }
 
 @media (max-width: 768px) {
+  .app-container {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .main-content-col,
+  .chat-container {
+    height: auto;
+    min-height: 100vh;
+  }
+
   .sidebar-col {
     position: fixed;
     top: 0;
     left: 0;
-    width: 280px;
+    width: 80vw;
+    max-width: 280px;
+    height: 100vh;
     z-index: 1050;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .open-sidebar-btn {
+    top: 0.75rem;
+    left: 0.75rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1.25rem;
+  }
+
+  .messages-container {
+    padding: 1.25rem 1rem;
   }
 
   .message-wrapper {
@@ -314,5 +341,9 @@
 
   .message-wrapper {
     max-width: 100%;
+  }
+
+  .chat-input-container {
+    padding: 0.75rem;
   }
 }
