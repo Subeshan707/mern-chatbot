@@ -82,6 +82,12 @@ function App() {
 
   useEffect(() => () => clearTimeout(typingTimeoutRef.current), [])
 
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setSidebarOpen(false)
+    }
+  }, [])
+
   const syncChatMessages = (chatId, nextMessages) => {
     setChats((currentChats) =>
       currentChats.map((chat) =>
